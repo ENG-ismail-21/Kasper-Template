@@ -401,6 +401,48 @@ header nav ul li a:hover {
   background-color: var(--mainColor);
   color: #fff;
 }
+/* For Slider */
+.box-container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  /* background-color: rgba(0 0 0 / 50%); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(0, 0);
+  transition: 0.3s;
+}
+.box-container .box-item {
+  background-image: url(../img/shuffle-02.jpg);
+  width: 60%;
+  height: 40%;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+@media (max-width: 768px) {
+  .box-container .box-item {
+    width: 450px;
+    height: 300px;
+  }
+}
+.box-container .box-item i {
+  font-size: 22px;
+  cursor: pointer;
+  color: var(--mainColor);
+}
+#close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+/* End Slider */
 .portfolio .imgs-continer {
   display: flex;
   flex-wrap: wrap;
@@ -692,6 +734,7 @@ header nav ul li a:hover {
   background-color: var(--mainColor);
   height: 100%;
   position: relative;
+  transition: width 0.5s linear;
 }
 .our-skills .skills .pro-holder .prog span::before {
   content: attr(data-progress);
